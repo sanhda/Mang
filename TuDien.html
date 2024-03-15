@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><label>Nhập từ: <input type="text" id="search-word"></label></td>
+        <td>
+            <button onclick="search()">Dịch</button></td>
+    </tr>
+</table>
+
+<p id="result"></p>
+<script>
+    let engArray = ['apple', 'hello', 'love']
+    let vietArray = ['táo', 'xin chào', 'yêu']
+    const search = () => {
+        let searchWord = document.getElementById("search-word").value;
+        console.log(engArray.indexOf(searchWord))
+        if (engArray.indexOf(searchWord) !== -1) {
+            document.getElementById('result').innerText = vietArray[engArray.indexOf(searchWord)];
+        } else {
+            document.getElementById('result').innerText = 'Không tìm thấy';
+        }
+    }
+</script>
+</body>
+</html>

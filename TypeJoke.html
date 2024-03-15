@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Type joke</title>
+</head>
+<body>
+
+<p>Type anything slowly</p>
+<textarea onkeyup="textChanged()" id="text"></textarea>
+
+<script>
+    const fixedText = "I am an idiot!"
+
+    function textChanged() {
+        let text = document.getElementById('text').value;
+        document.getElementById('text').value = (text.length <= fixedText.length)
+            ? fixedText.split("").splice(0, text.length).join("")
+            : '';
+    }
+
+
+</script>
+</body>
+</html>

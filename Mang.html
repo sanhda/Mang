@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mang</title>
+</head>
+<body>
+
+<script>
+    let array = [1, 7, 5, 9, 2, 6];
+
+    console.log("Các phần tử trong mảng")
+    for (let i = 0; i < array.length; i++) {
+        console.log(array[i])
+    }
+
+    console.log("Các phần tử chẵn trong mảng")
+    for (let i = 0; i < array.length; i++) {
+        if (array[i]%2===0) {
+            console.log(array[i])
+        }
+    }
+
+    console.log("Các phần tử ở vị trí chẵn trong mảng")
+    for (let i = 0; i < array.length; i+=2) {
+        console.log(array[i])
+    }
+
+    console.log("\ntổng các phần tử chẵn trong mảng")
+    let sum=0;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i]%2===0) {
+            sum+=array[i]
+        }
+    }
+    console.log(sum);
+
+    console.log("tổng các phần tử >10 trong mảng")
+    let sum2=0;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i]>10) {
+            sum2+=array[i]
+        }
+    }
+    console.log(sum2);
+
+    console.log("tổng các phần tử chia 7 dư 2 trong mảng")
+    let sum3=0;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i]%7===2) {
+            sum3+=array[i]
+        }
+    }
+    console.log(sum3);
+
+    console.log("max của các phần tử chẵn mảng")
+    let max=0;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i]%2===0 && array[i]>max) {
+            max=array[i]
+        }
+    }
+    console.log(max);
+
+    console.log("lớn nhất của mảng")
+    let max2=array[0];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i]>max) {
+            max2=array[i]
+        }
+    }
+    console.log(max2);
+
+    console.log("số lượng các phần tử chia hết cho 5 trong mảng")
+    let count=0;
+    for (let i = 0; i < array.length; i+=2) {
+        if (array[i]%5===0) {
+            count++;
+        }
+    }
+    console.log(count);
+
+    console.log("trung bình các phần tử chia hết cho 5 trong mảng")
+    let average=0;
+    for (let i = 0; i < array.length; i+=2) {
+        if (array[i]%5===0) {
+            average+=array[i];
+        }
+    }
+    console.log(average/count);
+
+    console.log("Phần tử lớn thứ 2 trong mảng")
+    console.log(array.sort(function(a,b) {return a-b;}).reverse()[1])
+
+</script>
+</body>
+</html>
